@@ -220,6 +220,15 @@ ffmpeg -i %1.%2 -i combined_audio.wav -map 0:v:0 -map 0:a:0 -map 0:s? -map 1:a:0
 
 These limitations are a trade off against more complicated character speaking detection algorithms. The current solution does not need to understand who is speaking because it just samples the original audio to determine what voice it should use for the corresponding transaltion. As such it does not need SRT clues as to who is speaking or the corresponding video to determine who is speaking. While such advanced analytics are possible and would yield a more accurate solution, they would make the solution a lot more complicated and take a lot longer to process. This solution is intended as a less accurate alternative which in many cases may be good enough.
 
+## Credit
+
+The Ming-3.0-tts folder is a clone of the Ming-3.0-tts repo created by ``InclusionAI``. It is included in this repo for convenience. If you prefer to clone the repo yourself, you can do so with:
+
+```
+git clone https://github.com/inclusionAI/Ming-3.0-tts.git
+```
+
+
 
 
 
