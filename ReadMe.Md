@@ -1,6 +1,6 @@
 # DUB 1.0
 
-This projects takes a foreign language video which contains English subtitles. It extracts the subtitles and generates a English soundstrack based on the extracted SRT subtiles and the original voice samples.
+This projects takes a foreign language video which contains English subtitles, extracts the subtitles, and generates an English soundtrack based on the extracted SRT subtitles using voice samples from the original sound track. This results in a secondary audio track which maintains the original audio except any speech is replaced by translated speech.
 
 ## Prerequisites
 
