@@ -1,6 +1,6 @@
 # DUB 1.0
 
-This projects takes a foreign language video which contains English subtitles, extracts the subtitles, and generates an English soundtrack based on the extracted SRT subtitles using voice samples from the original sound track. This results in a secondary audio track which maintains the original audio except any speech is replaced by translated speech.
+This projects takes a foreign language video which contains English subtitles. It extracts the subtitles and generates a English soundstrack based on the extracted SRT subtiles and the original voice samples.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ cd Dub
 Make and activate a Python 3.12 based environment using:
 
 ```
-py -3.12 -m venev env
+py -3.12 -m venv env
 .\env\Scripts\activate
 ```
 
@@ -219,15 +219,6 @@ ffmpeg -i %1.%2 -i combined_audio.wav -map 0:v:0 -map 0:a:0 -map 0:s? -map 1:a:0
 3. Any subtiles added which are not actually said (e.g. episode number and name, disclaimers, etc) will use the default Ming-3.0-tts voice.
 
 These limitations are a trade off against more complicated character speaking detection algorithms. The current solution does not need to understand who is speaking because it just samples the original audio to determine what voice it should use for the corresponding transaltion. As such it does not need SRT clues as to who is speaking or the corresponding video to determine who is speaking. While such advanced analytics are possible and would yield a more accurate solution, they would make the solution a lot more complicated and take a lot longer to process. This solution is intended as a less accurate alternative which in many cases may be good enough.
-
-## Credit
-
-The Ming-3.0-tts folder is a clone of the Ming-3.0-tts repo created by ``InclusionAI``. It is included in this repo for convenience. If you prefer to clone the repo yourself, you can do so with:
-
-```
-git clone https://github.com/inclusionAI/Ming-3.0-tts.git
-```
-
 
 
 
